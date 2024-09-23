@@ -1,6 +1,6 @@
 # Persian News Article Information Retrieval System
 
-This project implements a fundamental **Information Retrieval (IR)** system on a dataset of Persian news articles. You can find the [Test Data here](https://github.com/SahandNoey/Information-Retrieval-Course-Project/blob/master/IR_data_news_5k%202.json).
+Implemented **Information Retrieval (IR)** system on a dataset of Persian news articles. You can find the [Test Data here](https://github.com/SahandNoey/Information-Retrieval-Course-Project/blob/master/IR_data_news_5k%202.json).
 
 For each query, the system retrieves and prints **only the first document ID** using three distinct index types:
 
