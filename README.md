@@ -32,7 +32,3 @@ To rank documents based on their relevance to the query:
 
 ### 6. Champion List for Efficient Search
 A **Champion List** technique is employed to enhance retrieval speed. By focusing on a limited subset of highly relevant documents (those where terms occur at least five times), the system can deliver faster results, though some related documents might not be retrieved.
-
----
-
-This version keeps all the key details but organizes and rephrases them to make the structure and flow a bit different from the original. Let me know if you'd like any further adjustments!
