@@ -2,11 +2,10 @@
 
 This project implements a basic Information Retrieval (IR) system on a dataset of 13,000 Persian news articles. The system supports preprocessing, indexing, and retrieval using a variety of Information Retrieval techniques. The dataset is uploaded.
 
-## Sample Queries (Written in Persian):
 For each query, we print **only the first retrieved document ID** by three type of indices:
-- `Normal Index` that uses TF-IDF and cosine similarity on the whole documents to search on.
-- `Positional Index` that tries to find documents that has at least some of the terms placed consecutively, and if doesn't find any document with this property, it acts just like `Normal Index`.
-- `Champion List Index` that searchs on documents that have at least 5 occurrence of the term given. As a result, it retrieves documents faster but it may not retrieve all the related documents.
+- **Normal Index** that uses TF-IDF and cosine similarity on the whole documents to search on.
+- **Positional Index** that tries to find documents that has at least some of the terms placed consecutively, and if doesn't find any document with this property, it acts just like `Normal Index`.
+- **Champion List Index** that searchs on documents that have at least 5 occurrence of the term given. As a result, it retrieves documents faster but it may not retrieve all the related documents.
 
 
 ## Features
@@ -33,10 +32,3 @@ For calculating the relevance of documents to a given query:
 
 ### 6. Champions List
 To optimize retrieval, **Champions Lists** were implemented. This technique calculates similarity scores for a limited set of the most relevant documents (top-K documents), improving retrieval speed.
-
-## How It Works
-
-1. **Preprocessing**: The input Persian news dataset is first preprocessed using the steps mentioned above.
-2. **Indexing**: An inverted index and a positional index are created from the processed dataset.
-3. **Query Retrieval**: The user inputs a query, which is then processed and matched against the indexes using TF-IDF and cosine similarity.
-4. **Champion Lists**: The top-K relevant documents are retrieved from the Champions Lists to optimize query response time.
