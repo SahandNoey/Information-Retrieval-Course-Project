@@ -1,6 +1,7 @@
 # Information Retrieval System
 
-This project implements a basic Information Retrieval (IR) system on a dataset of 13,000 Persian news articles. The system supports preprocessing, indexing, and retrieval using a variety of Information Retrieval techniques. The dataset is uploaded.
+Implemented a basic Information Retrieval (IR) system on a dataset of  Persian news articles.
+[Test Dat](https://github.com/SahandNoey/Information-Retrieval-Course-Project/blob/master/IR_data_news_5k%202.json) is uploaded.
 
 For each query, we print **only the first retrieved document ID** by three type of indices:
 - **Normal Index** that uses TF-IDF and cosine similarity on the whole documents to search on.
