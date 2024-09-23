@@ -5,7 +5,7 @@ Implemented a basic Information Retrieval (IR) system on a dataset of  Persian n
 
 For each query, we print **only the first retrieved document ID** by three type of indices:
 - **Normal Index** that uses TF-IDF and cosine similarity on the whole documents to search on.
-- **Positional Index** that tries to find documents that has at least some of the terms placed consecutively, and if doesn't find any document with this property, it acts just like `Normal Index`.
+- **Positional Index** that tries to find documents that has at least some of the terms placed consecutively, and if doesn't find any document with this property, it acts just like Normal Index.
 - **Champion List Index** that searchs on documents that have at least 5 occurrence of the term given. As a result, it retrieves documents faster but it may not retrieve all the related documents.
 
 
