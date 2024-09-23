@@ -1,35 +1,38 @@
-# Information Retrieval System
+# Persian News Article Information Retrieval System
 
-Implemented a basic Information Retrieval (IR) system on a dataset of  Persian news articles.
-[Test Data](https://github.com/SahandNoey/Information-Retrieval-Course-Project/blob/master/IR_data_news_5k%202.json) is uploaded.
+This project implements a fundamental **Information Retrieval (IR)** system on a dataset of Persian news articles. You can find the [Test Data here](https://github.com/SahandNoey/Information-Retrieval-Course-Project/blob/master/IR_data_news_5k%202.json).
 
-For each query, we print **only the first retrieved document ID** by three type of indices:
-- **Normal Index** that uses TF-IDF and cosine similarity on the whole documents to search on.
-- **Positional Index** that tries to find documents that has at least some of the terms placed consecutively, and if doesn't find any document with this property, it acts just like Normal Index.
-- **Champion List Index** that searchs on documents that have at least 5 occurrence of the term given. As a result, it retrieves documents faster but it may not retrieve all the related documents.
+For each query, the system retrieves and prints **only the first document ID** using three distinct index types:
 
+1. **Standard Index**: Uses **TF-IDF** and **cosine similarity** to search across all documents.
+2. **Positional Index**: Prioritizes documents containing consecutive terms from the query. If none are found, it behaves like the Standard Index.
+3. **Champion List Index**: Focuses on documents where the query term occurs at least five times, providing faster search results, though it may miss some relevant documents.
 
-## Features
+## System Highlights
 
-### 1. Preprocessing
-The preprocessing phase included several key steps:
-- **Lemmatization**: Converted different tenses of verbs and variations of words into their root form.
-- **Normalization**: Standardized the text by converting all characters to a uniform case and removing any special characters.
-- **Tokenization**: Split the text into individual tokens (words/terms) for analysis.
+### 1. Text Preprocessing
+The preprocessing pipeline ensures that the text is prepared for efficient retrieval by performing:
+- **Lemmatization**: Converts different word forms and verb tenses into their root forms.
+- **Normalization**: Ensures consistency by unifying case and removing special characters.
+- **Tokenization**: Splits the text into individual words (tokens) for further analysis.
 
-### 2. Inverted Index
-An **Inverted Index** was built over the dataset to allow for efficient document retrieval. Each token is mapped to the list of documents (news articles) where it appears.
+### 2. Inverted Index Creation
+An **Inverted Index** was constructed to facilitate fast document retrieval. This index maps each word to a list of the documents (articles) in which it appears.
 
-### 3. Positional Index
-The system also supports a **Positional Index**, where both the term and its position within the document are stored. This allows for more advanced query retrieval techniques such as phrase queries.
+### 3. Positional Index Support
+A **Positional Index** is also included, which tracks the position of terms in documents. This index enhances the system’s ability to process phrase queries by identifying documents where specific terms appear in sequence.
 
-### 4. Positional Query Retrieval
-Implemented **Positional Query Retrieval**, where the system can handle phrase queries and return documents where the exact phrase appears by checking word positions within documents.
+### 4. Phrase Query Handling
+The system can process phrase queries, leveraging the **Positional Index** to find documents that contain the exact phrase by verifying the term positions.
 
-### 5. TF-IDF & Cosine Similarity
-For calculating the relevance of documents to a given query:
-- **TF-IDF (Term Frequency-Inverse Document Frequency)** was used to weigh terms by their importance in both the document and the overall dataset.
-- **Cosine Similarity** was implemented to measure the similarity between the query and each document.
+### 5. Relevance Calculation
+To rank documents based on their relevance to the query:
+- **TF-IDF (Term Frequency-Inverse Document Frequency)** is used to assign importance to terms within both individual documents and the overall collection.
+- **Cosine Similarity** measures how closely each document matches the query.
 
-### 6. Champions List
-To optimize retrieval, **Champions Lists** were implemented. This technique calculates similarity scores for a limited set of the most relevant documents (top-K documents), improving retrieval speed.
+### 6. Champion List for Efficient Search
+A **Champion List** technique is employed to enhance retrieval speed. By focusing on a limited subset of highly relevant documents (those where terms occur at least five times), the system can deliver faster results, though some related documents might not be retrieved.
+
+---
+
+This version keeps all the key details but organizes and rephrases them to make the structure and flow a bit different from the original. Let me know if you'd like any further adjustments!
