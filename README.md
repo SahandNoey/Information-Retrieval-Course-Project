@@ -1,7 +1,7 @@
 # Information Retrieval System
 
 Implemented a basic Information Retrieval (IR) system on a dataset of  Persian news articles.
-[Test Dat](https://github.com/SahandNoey/Information-Retrieval-Course-Project/blob/master/IR_data_news_5k%202.json) is uploaded.
+[Test Data](https://github.com/SahandNoey/Information-Retrieval-Course-Project/blob/master/IR_data_news_5k%202.json) is uploaded.
 
 For each query, we print **only the first retrieved document ID** by three type of indices:
 - **Normal Index** that uses TF-IDF and cosine similarity on the whole documents to search on.
